@@ -1,6 +1,7 @@
 #!/bin/bash
 
-echo "please enter the PIN_NUMBER"
-read -s PIN_NUMBER # here PIN_NUMBER is variable
+echo "Please enter PAN card Number"
+read -s PAN_CARD_NUMBER
 
-echo "PIN entered is : $PIN_NUMBER"
+
+echo "PAN Number is : $PAN_CARD_NUMBER
