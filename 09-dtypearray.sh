@@ -2,4 +2,4 @@
 
 LEADERS=("Modi" "trump" "putin" "hareesh")
 
-echo "All Leaders: ${LEADERS}[@]"
+echo "All Leaders: ${LEADERS[@]}"
