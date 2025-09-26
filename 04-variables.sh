@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# This is arguments
 PERSON1=$1
 PERSON2=$2
 
