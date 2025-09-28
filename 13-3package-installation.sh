@@ -1,7 +1,26 @@
-#!/bin/bash
+#/bin/bash
 
+USERID=$(id -u)
 
-sdxhhsbx
+if [ $USERID -ne 0 ]; then
+    echo "ERROR:: please run this script with root privelege"
+    exit 1
+fi
+ 
+VALIDATE(){
+    if [ $1 -ne 0 ]; then
+        echo "ERROR:: Installing $2 is failure"
+        exit 1
+    else
+        echo "Installing $2 is SUCCESS"
+    fi
+}
 
-sdxhhsbx
-sdxhhsbx
+dnf install mysql -y
+VALIDATE $? "MYSQL"
+
+dnf install nginx -y
+VALIDATE $? "nginx"
+
+dnf install mongodb-mongosh -y
+VALIDATE $? "mongosh"
